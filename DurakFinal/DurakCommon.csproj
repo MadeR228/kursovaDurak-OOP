@@ -1,0 +1,292 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{491019DA-8910-431F-9142-AC6EA10ED4CA}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Durak</RootNamespace>
+    <AssemblyName>DurakCommon</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <DocumentationFile>bin\Debug\DurakCommon.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Lidgren.Network">
+      <HintPath>..\lib\Lidgren.Network.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CardBox.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="CardBox.Designer.cs">
+      <DependentUpon>CardBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cards\CardEventArgs.cs" />
+    <Compile Include="Cards\CardRank.cs" />
+    <Compile Include="Cards\CardCollection.cs" />
+    <Compile Include="Cards\CardSuit.cs" />
+    <Compile Include="Cards\Deck.cs" />
+    <Compile Include="Cards\PlayingCard.cs" />
+    <Compile Include="Common\ClientTag.cs" />
+    <Compile Include="Client\GameClient.cs" />
+    <Compile Include="Common\Delegates.cs" />
+    <Compile Include="Common\GameMove.cs" />
+    <Compile Include="Common\GameState.cs" />
+    <Compile Include="Common\Logger.cs" />
+    <Compile Include="Common\NetSettings.cs" />
+    <Compile Include="Common\NetUtils.cs" />
+    <Compile Include="DiscardPile.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DiscardPile.Designer.cs">
+      <DependentUpon>DiscardPile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GameStateVisualizer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GameStateVisualizer.Designer.cs">
+      <DependentUpon>GameStateVisualizer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Server\IClientStateSetValidator.cs" />
+    <Compile Include="Server\IMoveSuccessRule.cs" />
+    <Compile Include="Server\Rules.cs" />
+    <Compile Include="Common\ServerState.cs" />
+    <Compile Include="Common\MessageType.cs" />
+    <Compile Include="Common\Player.cs" />
+    <Compile Include="Common\PlayerCollection.cs" />
+    <Compile Include="Common\ServerTag.cs" />
+    <Compile Include="Common\Utils.cs" />
+    <Compile Include="Server\AIMoveProposal.cs" />
+    <Compile Include="Server\IBotInvokeStateChecker.cs" />
+    <Compile Include="Server\BotPlayer.cs" />
+    <Compile Include="Server\IAIRule.cs" />
+    <Compile Include="Server\IGameInitRule.cs" />
+    <Compile Include="Server\IGameStateRule.cs" />
+    <Compile Include="Common\StateParameter.cs" />
+    <Compile Include="Server\GameServer.cs" />
+    <Compile Include="Server\IGamePlayRule.cs" />
+    <EmbeddedResource Include="CardBox.resx">
+      <DependentUpon>CardBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GameStateVisualizer.resx">
+      <DependentUpon>GameStateVisualizer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <None Include="app.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Clubs_Ace.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Clubs_Eight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Clubs_Jack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Clubs_King.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Clubs_Nine.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Clubs_Queen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Clubs_Seven.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Clubs_Six.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Clubs_Ten.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Diamonds_Ace.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Diamonds_Eight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Diamonds_Jack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Diamonds_King.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Diamonds_Nine.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Diamonds_Queen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Diamonds_Seven.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Diamonds_Six.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Diamonds_Ten.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hearts_Ace.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hearts_Eight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hearts_Jack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hearts_King.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hearts_Nine.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hearts_Queen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hearts_Seven.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hearts_Six.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Hearts_Ten.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Spades_Ace.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Spades_Eight.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Spades_Jack.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Spades_King.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Spades_Nine.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Spades_Queen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Spades_Seven.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Spades_Six.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Spades_Ten.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\names-corrected.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
