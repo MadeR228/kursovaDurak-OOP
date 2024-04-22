@@ -141,9 +141,13 @@ namespace Durak.Server
         // Визначає хід, який повинен зробити бот
         public PlayingCard DetermineMove()
         {
-            // Підготуйте список запропонованих ходів
-            for (int index = 0; index < myProposedMoves.Values.Count; index++)
-                myProposedMoves[myProposedMoves.Keys.ElementAt(index)] = 0;
+            // Створюємо копію ключів, щоб безпечно можна було модифікувати словник
+            var keys = myProposedMoves.Keys.ToList();
+
+            foreach (var key in keys)
+            {
+                myProposedMoves[key] = 0;
+            }
 
             // Впевненість у тому, що не потрібно робити жодного ходу
             float noMoveConfidence = 0;
@@ -155,9 +159,9 @@ namespace Durak.Server
                 rule.Propose(myProposedMoves, myServer, myPlayer.Hand);
             }
 
-            for (int index = 0; index < myProposedMoves.Count; index++)
+            foreach (var key in myProposedMoves.Keys.ToList())
             {
-                myProposedMoves[myProposedMoves.Keys.ElementAt(index)] *= (float)((myRandom.NextDouble() - 0.5d) * (1 - myDifficulty / 4));
+                myProposedMoves[key] *= (float)((myRandom.NextDouble() - 0.5d) * (1 - myDifficulty / 4));
             }
 
             // Сортування списку

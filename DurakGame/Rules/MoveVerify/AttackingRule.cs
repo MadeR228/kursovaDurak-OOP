@@ -44,6 +44,16 @@ namespace DurakGame.Rules
                     }
                 }
 
+                // Додаємо перевірку на кількість карт, які може зіграти атакуючий
+                int defenderCardCount = server.Players[server.GameState.GetValueByte(Names.DEFENDING_PLAYER)].Hand.Count;
+                int currentAttacks = server.GameState.GetValueInt(Names.CURRENT_ROUND);
+
+                if (currentAttacks >= defenderCardCount)
+                {
+                    reason = "Захисник не має достатньо карт, щоб захиститися від додаткових атак";
+                    return false;
+                }
+
                 int round = server.GameState.GetValueInt(Names.CURRENT_ROUND);
 
                 if (round == 0)

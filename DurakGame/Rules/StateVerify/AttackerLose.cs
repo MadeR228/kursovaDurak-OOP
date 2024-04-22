@@ -31,6 +31,7 @@ namespace DurakGame.Rules
         // Обробляє перевірку стану сервера. Якщо нападаючий програв, це відповідає за перехід до наступного раунду
         public void ValidateState(GameServer server)
         {
+
             // Виконувати це оновлення стану, лише якщо нападаючий відмовився
             if (server.GameState.GetValueBool(Names.ATTACKER_FORFEIT))
             {
