@@ -42,7 +42,8 @@
             this.wbrMain.Location = new System.Drawing.Point(0, 0);
             this.wbrMain.MinimumSize = new System.Drawing.Size(20, 20);
             this.wbrMain.Name = "wbrMain";
-            this.wbrMain.Size = new System.Drawing.Size(1257, 594);
+            this.wbrMain.ScrollBarsEnabled = false;
+            this.wbrMain.Size = new System.Drawing.Size(1257, 644);
             this.wbrMain.TabIndex = 1;
             // 
             // btnBack
@@ -59,7 +60,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1257, 594);
+            this.ClientSize = new System.Drawing.Size(1257, 644);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.wbrMain);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));

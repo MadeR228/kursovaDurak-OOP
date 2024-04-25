@@ -112,6 +112,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Rules.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -154,11 +159,6 @@
       <DependentUpon>PlayerView.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
-    <Compile Include="Properties\Resources.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
-    </Compile>
     <Compile Include="Rules\StateVerify\DefenderLose.cs" />
     <Compile Include="Rules\StateVerify\AttackerLose.cs" />
     <Compile Include="Rules\MoveVerify\AttackingRule.cs" />
@@ -231,8 +231,7 @@
     <Content Include="Resources\rules.html">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
-    <None Include="sandbox\backgroundgame.jpg" />
-    <None Include="sandbox\backgroundgame.png" />
+    <None Include="sandbox\background.jpg" />
     <None Include="sandbox\background.png" />
   </ItemGroup>
   <ItemGroup>

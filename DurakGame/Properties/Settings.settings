@@ -6,7 +6,7 @@
       <Value Profile="(Default)">Гравець</Value>
     </Setting>
     <Setting Name="DefaultBotDifficulty" Type="System.Single" Scope="User">
-      <Value Profile="(Default)">0.5</Value>
+      <Value Profile="(Default)">1</Value>
     </Setting>
     <Setting Name="DefaultBotsThink" Type="System.Boolean" Scope="User">
       <Value Profile="(Default)">True</Value>
