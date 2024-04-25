@@ -879,7 +879,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DarkGreen;
-            this.BackgroundImage = global::DurakGame.Properties.Resources.backgroundgame2;
+            this.BackgroundImage = global::DurakGame.Properties.Resources.background1;
             this.ClientSize = new System.Drawing.Size(1050, 601);
             this.Controls.Add(this.rtbChatLog);
             this.Controls.Add(this.pnlMyView);
