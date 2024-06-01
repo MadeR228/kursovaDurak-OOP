@@ -3,6 +3,7 @@ using Durak.Client;
 using Durak.Common;
 using Durak.Common.Cards;
 using Durak.Server;
+using DurakGame.Properties;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -19,7 +20,7 @@ namespace DurakGame
     // Представляє основну форму гри
     public partial class frmDurakGame : Form
     {
-        SoundPlayer sf = new SoundPlayer("E:\\kursova\\DurakGame\\Resources\\sound.wav");
+        SoundPlayer sf = new SoundPlayer(Properties.Resources.sound);
         // Структура для зберігання елементів інтерфейсу користувача для гравця
         private struct PlayerUITag
         {
