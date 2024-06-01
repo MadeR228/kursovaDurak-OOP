@@ -399,7 +399,7 @@ namespace Durak.Properties {
         ///SHARON 
         ///MICHELLE 
         ///LAURA 
-        ///SARAH 
+        /// [остаток строки не уместился]&quot;;.
         ///KIMBERLY 
         ///DEBORAH 
         ///JESSICA 
